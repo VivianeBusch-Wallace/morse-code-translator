@@ -11,8 +11,8 @@ function App() {
       </header>
       <div>
         <p>
-          Characters allowed: standard English alphabet, digits, punctuation:
-          comma, period
+          Characters allowed: standard English alphabet, digits, punctuation: .
+          , ; : ? ! etc.
         </p>
       </div>
       <section className="converter-container">
