@@ -1,7 +1,7 @@
 // import useState from React >>
 import React, { useState } from "react";
 
-function UserText({ userInput, setUserInput, codedInput, setCodedInput }) {
+function UserText({ userInput, changeUserInput, codedInput, convertedInput }) {
   // morse alphabet table >>
   const internationalMorseAlphabet = {
     a: ".-",
@@ -56,10 +56,11 @@ function UserText({ userInput, setUserInput, codedInput, setCodedInput }) {
     $: "...-..-",
     "'": ".----.",
     "&": ".-...",
+    " ": "/",
   };
-
+  // attach userInput to useState and convert it to lower case
   function inputChanges(e) {
-    setUserInput(e.target.value);
+    changeUserInput(e.target.value.toLowerCase());
     //  console.log(internationalMorseAlphabet[e.target.value]);
   }
 
@@ -68,34 +69,27 @@ function UserText({ userInput, setUserInput, codedInput, setCodedInput }) {
     // prevent default of form >>
     e.preventDefault();
 
+    // convert text into code using the morse code object >>
     let codedString = "";
     for (let letter of userInput) {
       codedString += " " + internationalMorseAlphabet[letter];
     }
-
-    setCodedInput(codedString);
-    // string to lower case, to array
-    // loop through table, find match with input array
-    // put value of key into new array, join(" ")
-    // send conversion result into props?
-
-    // check if has paragraphs, make user write it as a symbol?
-    // put paragraphs into element with ASCII?
-    // OR only check line by line of userinput...?
+    // send converted text to parent >>
+    convertedInput(codedString);
   }
   // reset userInput to blank on click of button>>
   function clearInput() {
-    setUserInput("");
+    changeUserInput("");
   }
 
   return (
     <form className="input-form" onSubmit={OnSubmit}>
-      <input
+      <textarea
         type="text"
-        className="input-text"
+        className="textarea"
         value={userInput}
         onChange={inputChanges}
-      ></input>
+      ></textarea>
       <input type="submit" value="Convert" />
       <button onClick={clearInput}>Clear Text</button>
     </form>
@@ -103,3 +97,12 @@ function UserText({ userInput, setUserInput, codedInput, setCodedInput }) {
 }
 
 export default UserText;
+
+// string to lower case, to array
+// loop through table, find match with input array
+// put value of key into new array, join(" ")
+// send conversion result into props?
+
+// check if has paragraphs, make user write it as a symbol?
+// put paragraphs into element with ASCII?
+// OR only check line by line of userinput...?
