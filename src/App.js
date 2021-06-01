@@ -1,9 +1,15 @@
+// import useState from React >>
+import React, { useState } from "react";
 // importing user input >>
 import UserText from "./components/UserInput";
 // importing converted morse code >>
 import MorseCode from "./components/MorseCode";
 
 function App() {
+  // initialize useState with userInput >>
+  const [userInput, setUserInput] = useState("");
+  const [codedInput, setCodedInput] = useState("");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,9 +23,14 @@ function App() {
       </div>
       <section className="converter-container">
         {/* user input text to convert >> */}
-        <UserText />
+        <UserText
+          userInput={userInput}
+          setUserInput={setUserInput}
+          codedInput={codedInput}
+          setCodedInput={setCodedInput}
+        />
         {/* converted text to be displayed >> */}
-        {/* <MorseCode /> */}
+        <MorseCode />
       </section>
     </div>
   );

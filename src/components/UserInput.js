@@ -1,11 +1,66 @@
 // import useState from React >>
-import { useState } from "react";
+import React, { useState } from "react";
 
-function UserText() {
-  // initialize useState with userInput >>
-  const [userInput, setUserInput] = useState("");
+function UserText({ userInput, setUserInput, codedInput, setCodedInput }) {
+  // morse alphabet table >>
+  const internationalMorseAlphabet = {
+    a: ".-",
+    b: "-...",
+    c: "-.-.",
+    d: "-..",
+    e: ".",
+    f: "..-.",
+    g: "--.",
+    h: "....",
+    i: "..",
+    j: ".---",
+    k: "-.-",
+    l: ".-..",
+    m: "--",
+    n: "-.",
+    o: "---",
+    p: ".--.",
+    q: "--.-",
+    r: ".-.",
+    s: "...",
+    t: "-",
+    u: "..-",
+    v: "...-",
+    w: ".--",
+    x: "-..-",
+    y: "-.--",
+    z: "--..",
+    0: "-----",
+    1: ".----",
+    2: "..---",
+    3: "...--",
+    4: "....-",
+    5: ".....",
+    6: "-....",
+    7: "--...",
+    8: "---..",
+    9: "----.",
+    ".": "......",
+    ",": ".-.-.-",
+    ";": "-.-.-.",
+    ":": "---...",
+    "?": "..--..",
+    "!": "--..--",
+    "(": "-.--.",
+    ")": "-.--.-",
+    "/": "-..-.",
+    "-": "-....-",
+    "@": ".--.-.",
+    "=": "-...-",
+    "+": ".-.-.",
+    $: "...-..-",
+    "'": ".----.",
+    "&": ".-...",
+  };
+
   function inputChanges(e) {
     setUserInput(e.target.value);
+    //  console.log(internationalMorseAlphabet[e.target.value]);
   }
 
   // what should happen on submit >>
@@ -13,63 +68,14 @@ function UserText() {
     // prevent default of form >>
     e.preventDefault();
 
-    // morse alphabet table >>
-    const internationalMorseAlphabet = {
-      a: ".-",
-      b: "-...",
-      c: "-.-.",
-      d: "-..",
-      e: ".",
-      f: "..-.",
-      g: "--.",
-      h: "....",
-      i: "..",
-      j: ".---",
-      k: "-.-",
-      l: ".-..",
-      m: "--",
-      n: "-.",
-      o: "---",
-      p: ".--.",
-      q: "--.-",
-      r: ".-.",
-      s: "...",
-      t: "-",
-      u: "..-",
-      v: "...-",
-      w: ".--",
-      x: "-..-",
-      y: "-.--",
-      z: "--..",
-      0: "-----",
-      1: ".----",
-      2: "..---",
-      3: "...--",
-      4: "....-",
-      5: ".....",
-      6: "-....",
-      7: "--...",
-      8: "---..",
-      9: "----.",
-      ".": "......",
-      ",": ".-.-.-",
-      ";": "-.-.-.",
-      ":": "---...",
-      "?": "..--..",
-      "!": "--..--",
-      "(": "-.--.",
-      ")": "-.--.-",
-      "/": "-..-.",
-      "-": "-....-",
-      "@": ".--.-.",
-      "=": "-...-",
-      "+": ".-.-.",
-      $: "...-..-",
-      "'": ".----.",
-    };
-
     // string to lower case, to array
     // loop through table, find match with input array
+    let codedString = "";
+    for (let letter of userInput) {
+      codedString += " " + internationalMorseAlphabet[letter];
+    }
+
+    setCodedInput(codedString);
     // put value of key into new array, join(" ")
     // send conversion result into props?
 
@@ -80,7 +86,6 @@ function UserText() {
     // reset userInput to blank >>
     setUserInput("");
   }
-
   return (
     <form className="input-form" onSubmit={OnSubmit}>
       <input
