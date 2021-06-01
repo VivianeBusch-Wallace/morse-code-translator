@@ -9,10 +9,18 @@ function App() {
       <header className="App-header">
         <h1>This is a Morse Code Converter</h1>
       </header>
-      {/* user input text to convert >> */}
-      <UserText />
-      {/* converted text to be displayed >> */}
-      <MorseCode />
+      <div>
+        <p>
+          Characters allowed: standard English alphabet, digits, punctuation:
+          comma, period
+        </p>
+      </div>
+      <section className="converter-container">
+        {/* user input text to convert >> */}
+        <UserText />
+        {/* converted text to be displayed >> */}
+        <MorseCode />
+      </section>
     </div>
   );
 }

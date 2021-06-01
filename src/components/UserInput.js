@@ -1,11 +1,15 @@
-// import useState
+// import useState from React >>
+import { useState } from "react";
 
 function UserText() {
+  // initialize useState with userInput
+  const [userInput, setUserInput] = useState("");
+
   function OnSubmit(e) {
     // prevent default of form >>
     e.preventDefault();
-    // string to array
-    // switch case for morse code conversion?
+    // string to lower case, to array
+
     // send conversion into props?
   }
 
