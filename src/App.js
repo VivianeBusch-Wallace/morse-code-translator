@@ -19,7 +19,7 @@ function App() {
         {/* user input text to convert >> */}
         <UserText />
         {/* converted text to be displayed >> */}
-        <MorseCode />
+        {/* <MorseCode /> */}
       </section>
     </div>
   );
