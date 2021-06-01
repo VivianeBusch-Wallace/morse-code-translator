@@ -1,7 +1,7 @@
 // importing user input >>
-import UserText from "./javascript components/UserInput";
+import UserText from "./components/UserInput";
 // importing converted morse code >>
-import MorseCode from "./javascript components/MorseCode";
+import MorseCode from "./components/MorseCode";
 
 function App() {
   return (
