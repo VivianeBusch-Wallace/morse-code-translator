@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // importing user input >>
 import UserText from "./components/UserInput";
 // importing converted morse code >>
-import MorseCode from "./components/MorseCode";
+// import MorseCode from "./components/MorseCode";
 
 function App() {
   // initialize useState with userInput >>
@@ -30,7 +30,7 @@ function App() {
           setCodedInput={setCodedInput}
         />
         {/* converted text to be displayed >> */}
-        <MorseCode />
+        {/* <MorseCode /> */}
       </section>
     </div>
   );

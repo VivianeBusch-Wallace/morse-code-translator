@@ -68,24 +68,26 @@ function UserText({ userInput, setUserInput, codedInput, setCodedInput }) {
     // prevent default of form >>
     e.preventDefault();
 
-    // string to lower case, to array
-    // loop through table, find match with input array
     let codedString = "";
     for (let letter of userInput) {
       codedString += " " + internationalMorseAlphabet[letter];
     }
 
     setCodedInput(codedString);
+    // string to lower case, to array
+    // loop through table, find match with input array
     // put value of key into new array, join(" ")
     // send conversion result into props?
 
     // check if has paragraphs, make user write it as a symbol?
     // put paragraphs into element with ASCII?
     // OR only check line by line of userinput...?
-
-    // reset userInput to blank >>
+  }
+  // reset userInput to blank on click of button>>
+  function clearInput() {
     setUserInput("");
   }
+
   return (
     <form className="input-form" onSubmit={OnSubmit}>
       <input
@@ -95,6 +97,7 @@ function UserText({ userInput, setUserInput, codedInput, setCodedInput }) {
         onChange={inputChanges}
       ></input>
       <input type="submit" value="Convert" />
+      <button onClick={clearInput}>Clear Text</button>
     </form>
   );
 }
