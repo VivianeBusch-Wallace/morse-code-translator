@@ -69,8 +69,16 @@ function UserText() {
     };
 
     // string to lower case, to array
+    // loop through table, find match with input array
+    // put value of key into new array, join(" ")
+    // send conversion result into props?
 
-    // send conversion into props?
+    // check if has paragraphs, make user write it as a symbol?
+    // put paragraphs into element with ASCII?
+    // OR only check line by line of userinput...?
+
+    // reset userInput to blank >>
+    setUserInput("");
   }
 
   return (
