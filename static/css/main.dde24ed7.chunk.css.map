@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/scss/main.scss"],"names":[],"mappings":"AAAA,KACE,cAAe,CAChB,QAGC,qBAAwB,CACxB,UAAW,CACX,WAAY,CACZ,cAAe","file":"main.dde24ed7.chunk.css","sourcesContent":["body {\n  font-size: 16px;\n}\n\n.result {\n  background-color: yellow;\n  width: 50vw;\n  height: 20vh;\n  font-size: 30px;\n}\n"]}
