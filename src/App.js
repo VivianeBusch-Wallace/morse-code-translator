@@ -1,4 +1,4 @@
-// import useState from React >>
+// import React and useState from React >>
 import React, { useState } from "react";
 // importing user input >>
 import UserText from "./components/UserInput";
@@ -25,8 +25,8 @@ function App() {
       </header>
       <div>
         <p>
-          Characters allowed: standard English alphabet, digits, punctuation: .
-          , ; : ? ! etc.
+          Characters allowed: standard English alphabet, number digits, special
+          characters: @ $ &, punctuation: . , ; : ? ! () / - = + ' [space]
         </p>
         <p>
           Type in the text that you would like to convert into morse code into
