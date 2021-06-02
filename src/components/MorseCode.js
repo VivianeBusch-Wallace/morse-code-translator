@@ -1,5 +1,5 @@
-// import useState from React >>
-import React, { useState } from "react";
+// import React from React >>
+import React from "react";
 
 function MorseCode({ convertedInput }) {
   console.log(convertedInput);
