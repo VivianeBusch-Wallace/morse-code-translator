@@ -11,7 +11,7 @@ function App() {
   // initialize useState with converted text >>
   const [codedInput, setCodedInput] = useState("");
 
-  const changeUserInputApp = (value) => {
+  const changeUserInputParent = (value) => {
     setUserInput(value);
   };
   const convertedInput = (value) => {
@@ -41,8 +41,7 @@ function App() {
         {/* user input text to convert >> */}
         <UserText
           userInput={userInput}
-          changeUserInput={changeUserInputApp}
-          codedInput={codedInput}
+          changeUserInputChild={changeUserInputParent}
           convertedInput={convertedInput}
         />
         {/* converted text to be displayed >> */}

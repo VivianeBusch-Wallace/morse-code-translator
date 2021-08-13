@@ -1,7 +1,7 @@
 // import React and useState from React >>
 import React from "react";
 
-function UserText({ userInput, changeUserInput, codedInput, convertedInput }) {
+function UserText({ userInput, changeUserInputChild, convertedInput }) {
   // morse alphabet table >>
   const internationalMorseAlphabet = {
     a: ".-",
@@ -60,7 +60,7 @@ function UserText({ userInput, changeUserInput, codedInput, convertedInput }) {
   };
   // attach userInput to useState and convert it to lower case >>
   function inputChanges(e) {
-    changeUserInput(e.target.value.toLowerCase());
+    changeUserInputChild(e.target.value.toLowerCase());
   }
 
   // what should happen on submit (clicking 'Convert') >>
@@ -78,7 +78,7 @@ function UserText({ userInput, changeUserInput, codedInput, convertedInput }) {
   }
   // reset userInput to blank on click of button 'Clear Text' >>
   function clearInput() {
-    changeUserInput("");
+    changeUserInputChild("");
   }
 
   return (
