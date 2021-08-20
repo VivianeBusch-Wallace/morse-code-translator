@@ -20,34 +20,46 @@ function App() {
 
   return (
     <div className="App">
+      {/* page title >> */}
       <header className="App-header">
         <h1>Morse Code Converter</h1>
       </header>
-      <div className="image-container">
-        <img src={process.env.PUBLIC_URL + "/images/morse-code-unsplash.jpg"} />
-      </div>
-      <div>
-        <h4>The alphabet is based on the international morse code</h4>
-        <h3>Rules</h3>
-        <p>
-          Characters allowed: standard English alphabet, number digits, special
-          characters: @ $ &, punctuation: . , ; : ? ! () / - = + ' [space]
-        </p>
-        <p>
-          Type in the text that you would like to convert into the text box
-          below and then click "Convert".
-        </p>
-        <p>You can empty the textbox by clicking on "Clear Text".</p>
-        <p>Spaces are converted to '/' in the morse code.</p>
-      </div>
+
+      {/* morse code image >> */}
+      <section className="explanation-img-container">
+        <div className="image-container">
+          <img
+            src={process.env.PUBLIC_URL + "/images/morse-code-unsplash.jpg"}
+          />
+        </div>
+
+        {/* displayed text >> */}
+        <div className="explanation-text-container">
+          <h4>The alphabet is based on the international morse code</h4>
+          <h3>How to use</h3>
+          <p>
+            Characters allowed: standard English alphabet, number digits,
+            special characters: @ $ &, punctuation: . , ; : ? ! () / - = + '
+            [space]
+          </p>
+          <p>
+            Type in the text that you would like to convert into the text box
+            below and then click "Convert".
+          </p>
+          <p>You can empty the textbox by clicking on "Clear Text".</p>
+          <p>Spaces are converted to '/' in the morse code.</p>
+        </div>
+      </section>
+
       <section className="converter-container">
-        {/* user input text to convert >> */}
+        {/* user input box (text to convert) >> */}
         <UserText
           userInput={userInput}
           changeUserInputChild={changeUserInputParent}
           convertedInput={convertedInput}
         />
-        {/* converted text to be displayed >> */}
+
+        {/* output box (converted text to be displayed) >> */}
         <MorseCode convertedInput={codedInput} />
       </section>
     </div>
