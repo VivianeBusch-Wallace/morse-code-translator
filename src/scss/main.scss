@@ -1,4 +1,4 @@
-.App {
+body {
   font-size: 16px;
   font-family: Arial, Georgia, Times, "Times New Roman", serif;
   color: antiquewhite;
@@ -7,6 +7,33 @@
   justify-content: center;
   align-items: center;
   background-color: black;
+}
+
+// from App.js
+.App {
+  // title of page
+  header {
+    h1 {
+    }
+  }
+  .explanation-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vw;
+    // the image
+    .image-container {
+      margin-right: 3vw;
+      img {
+        width: 20vw;
+        height: auto;
+      }
+    }
+    // text explaining rules how to use
+    .explanation-text-container {
+    }
+  }
 }
 
 // from UserInput.js
