@@ -23,6 +23,9 @@ function App() {
       <header className="App-header">
         <h1>Morse Code Converter</h1>
       </header>
+      <div className="image-container">
+        <img src={process.env.PUBLIC_URL + "/images/morse-code-unsplash.jpg"} />
+      </div>
       <div>
         <h4>The alphabet is based on the international morse code</h4>
         <h3>Rules</h3>
