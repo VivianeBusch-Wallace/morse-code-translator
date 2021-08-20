@@ -1,9 +1,29 @@
 body {
   font-size: 16px;
+  font-family: Arial, Georgia, Times, "Times New Roman", serif;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
+// from UserInput.js
+// Form
+.input-form {
+  .textarea {
+  }
+  input {
+  }
+  button {
+  }
+}
+
+// from MorseCode.js
+// just the result
 .result {
-  background-color: yellow;
+  background-color: beige;
   width: 50vw;
   height: 20vh;
   font-size: 30px;

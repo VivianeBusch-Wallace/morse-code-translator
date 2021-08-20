@@ -97,6 +97,7 @@ function UserText({ userInput, changeUserInputChild, convertedInput }) {
 
 export default UserText;
 
+// Notes to self:
 // string to lower case, to array
 // loop through table, find match with input array
 // put value of key into new array, join(" ")
