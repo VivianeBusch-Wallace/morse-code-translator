@@ -49,6 +49,84 @@ function App() {
           <p>You can empty the textbox by clicking on "Clear Text".</p>
           <p>Spaces are converted to '/' in the morse code.</p>
         </div>
+        <div className="table-container">
+          <table>
+            <tr>
+              <th>Aa</th>
+              <th>Bb</th>
+              <th>Cc</th>
+              <th>Dd</th>
+              <th>Ee</th>
+              <th>Ff</th>
+              <th>Gg</th>
+              <th>Hh</th>
+              <th>Ii</th>
+              <th>Jj</th>
+              <th>Kk</th>
+              <th>Ll</th>
+              <th>Mm</th>
+              <th>Nn</th>
+              <th>Oo</th>
+              <th>Pp</th>
+              <th>Qq</th>
+              <th>Rr</th>
+              <th>Ss</th>
+              <th>Tt</th>
+              <th>Uu</th>
+              <th>Vv</th>
+              <th>Ww</th>
+              <th>Xx</th>
+              <th>Yy</th>
+              <th>Zz</th>
+              <th>0</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+              <th>.</th>
+              <th>,</th>
+              <th>;</th>
+              <th>:</th>
+              <th>?</th>
+              <th>!</th>
+              <th>(</th>
+              <th>)</th>
+              <th>/</th>
+              <th>-</th>
+              <th>@</th>
+              <th>=</th>
+              <th>+</th>
+              <th>$</th>
+              <th>0</th>
+              <th>' (=apostrophe)</th>
+              <th>"</th>
+              <th>&</th>
+              <th>[empty space]</th>
+              <th>4</th>
+              <th>5</th>
+            </tr>
+            <tr>
+              <td>.-</td>
+            </tr>
+          </table>
+          <p>
+            a: ".-", b: "-...", c: "-.-.", d: "-..", e: ".", f: "..-.", g:
+            "--.", h: "....", i: "..", j: ".---", k: "-.-", l: ".-..", m: "--",
+            n: "-.", o: "---", p: ".--.", q: "--.-", r: ".-.", s: "...", t: "-",
+            u: "..-", v: "...-", w: ".--", x: "-..-", y: "-.--", z: "--..", 0:
+            "-----", 1: ".----", 2: "..---", 3: "...--", 4: "....-", 5: ".....",
+            6: "-....", 7: "--...", 8: "---..", 9: "----.", ".": "......",
+            ",":".-.-.-", ";": "-.-.-.", ":": "---...", "?": "..--..",
+            "!":"--..--", "(": "-.--.", ")": "-.--.-", "/": "-..-.", "-":
+            "-....-", "@": ".--.-.", "=": "-...-", "+": ".-.-.", $: "...-..-",
+            "'":".----.", "&": ".-...", " ": "/",
+          </p>
+        </div>
       </section>
 
       <section className="converter-container">

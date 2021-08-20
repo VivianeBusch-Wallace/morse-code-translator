@@ -55,6 +55,7 @@ function UserText({ userInput, changeUserInputChild, convertedInput }) {
     "+": ".-.-.",
     $: "...-..-",
     "'": ".----.",
+    "\"": ".-..-.",
     "&": ".-...",
     " ": "/",
   };
